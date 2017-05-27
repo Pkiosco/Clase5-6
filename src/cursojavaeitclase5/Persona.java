@@ -8,11 +8,11 @@ package cursojavaeitclase5;
 import java.util.Objects;
 
 
-public class Persona {
+public class Persona implements Comparable<Persona>{
     private String dni;
     private String nombre;
 
-    public Persona(String nombre, String dni) {
+    public Persona( String dni, String nombre) {
         this.dni = dni;
         this.nombre = nombre;
     }  
@@ -63,6 +63,11 @@ public class Persona {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+    
+    public int compareTo(Persona otra){
+   
+    return this.dni.compareTo(otra.dni) * -1 ;
     }
     
     

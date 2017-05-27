@@ -1,3 +1,5 @@
+
+        
 /*
 codingbat.com
 https://www.viinacademy.com
@@ -34,7 +36,7 @@ System.out.println(nombres.size())
 
  */
 package cursojavaeitclase5;
-
+import java.util.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -57,7 +59,7 @@ public class CursoJavaEITClase5 {
             System.out.println(e);            
         }
         System.out.println(nombres.indexOf("Arribas"));*/
-        Set <Persona> personas = new HashSet<>();
+       /* Set <Persona> personas = new HashSet<>();
         personas.add(new Persona("Juan", "10"));
         personas.add(new Persona("Juan", "10"));
         personas.add(new Persona("Pedro", "11"));
@@ -73,8 +75,32 @@ public class CursoJavaEITClase5 {
         ordenados.add("c");
         for(String l : ordenados)
             System.out.println(l);       
+       */
+      /*  
+       SortedSet <Persona> Personas = new TreeSet<Persona>();
+       Personas.add ( new Persona ("juan","1"));
+       Personas.add ( new Persona ("Pedro","2"));
+       Personas.add ( new Persona ("juan2","3"));
        
+       for(Persona p: Personas )
+            System.out.println(p);*/
+      
+      Map <String,Persona> PersonasPorDni = new HashMap <> ();
         
+        PersonasPorDni.put("15",new Persona("15","Juan"));
+        Persona p2  = new Persona ("10", "Pedro");
+        PersonasPorDni.put(p2.getDni(), p2);
+        PersonasPorDni.put("10", p2);
+
+        Persona x = PersonasPorDni.get("15");
+
+        System.out.println(x);
+    
+        
+        
+        for (Persona p: PersonasPorDni.values()){
+            System.out.println(p); 
+}
 
     }
     
